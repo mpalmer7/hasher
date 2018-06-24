@@ -36,7 +36,12 @@ def file_hash(filename):
 		
 
 def write_opt(opt, inp):
-	with open("hashes.csv", 'w') as f:
+	#Potentially name file/string csv automatically.  Security issues though.
+	#if args.file:
+	#	new = inp.split(".")
+	#	inp = new[0]
+	
+	with open("hashed.csv", 'w') as f:
 		writer = csv.writer(f, lineterminator='\n')
 		writer.writerow([inp])
 		writer.writerows(opt)
